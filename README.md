@@ -1,4 +1,4 @@
-# 🎓 Academic Hub (Academic Resource Sharing & Communication System)
+#  Academic Hub (Academic Resource Sharing & Communication System)
 
 Academic Hub is a premium, feature-rich Flutter Android application designed to streamline resource distribution and communication between Faculty and Students. It integrates real-time database syncing, secure document storage, and cutting-edge **Generative AI** features.
 
@@ -19,24 +19,24 @@ This app features state-of-the-art AI integration powered by **Llama 3.3 70B** t
 
 ---
 
-## 🚀 Core Features
+##  Core Features
 
-### 🔐 Role-Based Access Control
+###  Role-Based Access Control
 * **Faculty Interface**: Upload documents (PDF, PPT, Word), manage uploaded files, create class-specific alerts, view download counts, and chat with students.
 * **Student Interface**: View and download study materials tailored to their specific Branch, Semester, and Section; read PDFs in-app, and create collaborative learning groups.
 
-### 📁 Smart Materials Hub
+###  Smart Materials Hub
 * Filtered automatically by **Branch ➔ Semester ➔ Section**.
 * Supports direct in-app PDF rendering with custom zoom and page controls.
 * Built-in warning banner alert if non-PDF formats are uploaded, informing users about DocuChat AI compatibility.
 
-### ✉️ Real-Time Messaging & Collaboration
+###  Real-Time Messaging & Collaboration
 * **1-to-1 Messaging**: Direct real-time chat between students and faculty.
 * **Group Discussions**: Peer-to-peer chat rooms created by students for collaborative group study.
 * **Rich Attachments**: Real-time image and document uploads directly inside chat bubbles.
 * **Security**: Support for deleting messages in real-time.
 
-### 📄 Advanced PDF Engine (Dual-Library Architecture)
+###  Advanced PDF Engine (Dual-Library Architecture)
 The app uses a two-library approach to deliver a premium, fully-featured PDF experience:
 
 * **`pdfx` (Native PDF Rendering)**
@@ -51,7 +51,7 @@ The app uses a two-library approach to deliver a premium, fully-featured PDF exp
 
 ---
 
-## 📁 Complete Project Structure
+##  Complete Project Structure
 
 ```text
 academicapp/                                    # Flutter project root
@@ -226,7 +226,7 @@ service cloud.firestore {
 
 ---
 
-## 🛠️ Stack & Dependencies
+##  Stack & Dependencies
 * **Core**: Flutter / Dart
 * **Backend**: Firebase Auth, Cloud Firestore
 * **Storage**: Cloudinary (Unsigned Preset API)
@@ -237,4 +237,4 @@ service cloud.firestore {
 
 ---
 
-**Made with ❤️ for Academic Excellence**
+**Made with ❤️ for Academic Excellence as part of 4th semester Mobile Application Development project**
