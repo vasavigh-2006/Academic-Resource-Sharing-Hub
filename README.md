@@ -1,4 +1,4 @@
-#  Academic Hub (Academic Resource Sharing & Communication System)
+#  Academic Resource Sharing & Communication Hub
 
 Academic Hub is a premium, feature-rich Flutter Android application designed to streamline resource distribution and communication between Faculty and Students. It integrates real-time database syncing, secure document storage, and cutting-edge **Generative AI** features.
 
