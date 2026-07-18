@@ -1,0 +1,74 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"
+    // Must be applied after the Android plugin
+    id "com.google.gms.google-services"
+}
+
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file('local.properties')
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withReader('UTF-8') { reader ->
+        localProperties.load(reader)
+    }
+}
+
+def flutterVersionCode = localProperties.getProperty('flutter.versionCode') ?: '1'
+def flutterVersionName = localProperties.getProperty('flutter.versionName') ?: '1.0'
+
+android {
+    namespace "com.example.academicapp"
+    compileSdk 36
+    ndkVersion flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+
+
+
+    defaultConfig {
+        applicationId "com.example.academicapp"
+        
+        // UPDATED: Set to 23 for modern Firebase compatibility
+        minSdkVersion 24 
+        targetSdk 36
+
+        versionCode flutterVersionCode.toInteger()
+        versionName flutterVersionName
+
+        // UPDATED: Essential for large Firebase apps to prevent 64k method limit errors
+        multiDexEnabled true
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.debug
+        }
+    }
+}
+
+flutter {
+    source "../.."
+}
+
+dependencies {
+
+    // UPDATED: Using BOM 33.1.0 to match your newer pubspec.yaml plugins
+    implementation platform("com.google.firebase:firebase-bom:33.1.0")
+    implementation "com.google.firebase:firebase-analytics"
+    
+    // Explicit multidex dependency for older Android versions
+    implementation "androidx.multidex:multidex:2.0.1"
+}
